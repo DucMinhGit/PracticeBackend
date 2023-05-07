@@ -19,5 +19,16 @@ class BankAccount
 
         return $this;
     }
+
+    public function withDraw($amount):bool 
+    {
+        if($amount > 0 && $amount <= $this->balance) 
+        {
+            $this->balance -= $amount;
+
+            return true;
+        }
+
+        return false;
+    }
 }
-?>

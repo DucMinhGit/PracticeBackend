@@ -1,11 +1,9 @@
 <?php
 
-require "SavingAccount.php";
+require "CheckingAccount.php";
 
-$account = new SavingAccount(100, 0.05);
+$account = new CheckingAccount(100, 20);
 
-$account->addInterest();
+$account->withDraw(32);
 
-echo $account->getBalance();
-
-?>
+$account->getBalance();
