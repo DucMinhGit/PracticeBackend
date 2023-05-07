@@ -1,10 +1,14 @@
 <?php
 
-include "BankAccount.php";
+include_once "BankAccount.php";
 
 class SavingAccount extends BankAccount 
 {
-    private float $interestRate;
+    public function __construct(private float $balance, private float $interestRate)
+    {
+        parent::__construct($balance);
+        $this->interestRate = $interestRate;
+    }
 
     public function setInterestRate(float $interestRate) 
     {
@@ -20,14 +24,4 @@ class SavingAccount extends BankAccount
         $this->deposit($interest);
     }
 }
-
-$account = new SavingAccount;
-
-$account->deposit(100);
-
-$account->setInterestRate(0.05);
-
-$account->addInterest();
-
-echo $account->getBalance();
 ?>

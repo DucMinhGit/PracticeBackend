@@ -1,7 +1,10 @@
 <?php
 class BankAccount 
 {
-    private float $balance;
+    public function __construct(private float $balance)
+    {
+        $this->balance = $balance;
+    }
 
     public function getBalance():float 
     {
