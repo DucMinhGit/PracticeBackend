@@ -8,3 +8,6 @@ $div->id = "page";
 $div->class = "light";
 
 echo $div->html("Hello");
+
+echo $div->id;
+echo $div->class;
