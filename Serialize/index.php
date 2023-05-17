@@ -6,4 +6,6 @@ $customer = new Customer(10, 'John Doe', 'john.doe@example.com');
 
 $str = serialize($customer);
 
-file_put_contents('customer.txt', $str);
+// file_put_contents('customer.txt', $str);
+
+var_dump($str);

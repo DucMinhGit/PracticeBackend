@@ -15,5 +15,10 @@ class Customer
             return strtoupper(substr($this->name, 0, 1));
         }
     }
+
+    public function __sleep()
+    {
+        return ['id', 'name'];
+    }
 }
 ?>
