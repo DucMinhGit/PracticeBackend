@@ -16,9 +16,17 @@ class Customer
         }
     }
 
-    public function __sleep()
+    // public function __sleep()
+    // {
+    //     return ['id', 'name'];
+    // }
+
+    public function __serialize(): array
     {
-        return ['id', 'name'];
+        return [
+            'id' => $this->id,
+            'name' => $this->name
+        ];
     }
 }
 ?>
