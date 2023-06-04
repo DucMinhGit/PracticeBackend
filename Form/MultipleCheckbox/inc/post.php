@@ -10,8 +10,7 @@ $selected_toppings = filter_input(
 
 //Select the topping names
 $toppings = array_keys($pizza_toppings);
-var_dump($selected_toppings);
-die;
+
 $_SESSION['selected_toppings'] = []; //for storing selected toppings
 $total = 0; //for storing total
 

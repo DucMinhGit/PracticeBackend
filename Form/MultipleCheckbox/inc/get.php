@@ -1,4 +1,4 @@
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
 <h1>Please select your pizza toppings:</h1>
     <ul>
         <?php foreach($pizza_toppings as $topping => $price) : ?>
