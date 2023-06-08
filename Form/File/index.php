@@ -20,7 +20,7 @@ require_once __DIR__ . '../../Flash/inc/flash.php';
     <form enctype="multipart/form-data" action="upload.php" method="post">
         <div>
             <label for="file">Select a file:</label>
-            <input type="file" id="file" name="file"/>
+            <input type="file" id="file" name="files[]" multiple require/>
         </div>
         <div>
             <button type="submit">Upload</button>
