@@ -1,6 +1,6 @@
 <?php
 
 $host = 'localhost';
-$db = 'thuctap';
-$user = 'postgres';
+$db = 'bookdb';
+$user = 'root';
 $password = '';

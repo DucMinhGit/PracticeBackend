@@ -1,3 +1,3 @@
 <?php
 
-$connect = require "./connect.php";
+$pdo = require "./Connection.php";
