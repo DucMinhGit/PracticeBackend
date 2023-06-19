@@ -1,3 +1,5 @@
 <?php
 
-$pdo = require "./Connection.php";
+// $pdo = require "./Connection.php";
+
+require "./InsertData.php";
