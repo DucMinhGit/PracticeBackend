@@ -1,20 +1,23 @@
 <?php
 
+$publisher_id = 11;
+
 $sql = "SELECT publisher_id, name
-        FROM publishers";
+        FROM publishers WHERE publisher_id=:publisher_id";
 
 // Connect database
 $pdo = require "./Connection.php";
 
-$statement = $pdo->query($sql);
+$statement = $pdo->prepare($sql);
+$statement->bindValue(":publisher_id", $publisher_id);
 
-$publishers = $statement->fetchAll(PDO::FETCH_ASSOC);
+$statement->execute();
 
-if($publishers)
+$publisher = $statement->fetch(PDO::FETCH_ASSOC);
+
+if($publisher)
 {
-    // show all publishers
-    foreach($publishers as $publisher)
-    {
-        echo $publisher['name'] . "<br>";
-    }
+    echo $publisher['publisher_id'] . '.' . $publisher['name'];
+} else {
+	echo "The publisher with id $publisher_id was not found.";
 }
