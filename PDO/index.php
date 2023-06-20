@@ -2,4 +2,4 @@
 
 // $pdo = require "./Connection.php";
 
-require "./update.php";
+require "./select.php";
